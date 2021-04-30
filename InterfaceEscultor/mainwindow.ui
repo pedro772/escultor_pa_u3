@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>757</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Plotter" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>441</width>
+      <height>371</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCriaCanvas">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>120</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Criar Canvas</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>10</y>
+      <width>61</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dimensões&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>400</y>
+      <width>339</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="Profundidade">
+       <property name="text">
+        <string>                Profundidade</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBoxProf"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>350</y>
+      <width>81</width>
+      <height>119</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="2">
+      <widget class="QLabel" name="Vermelho">
+       <property name="text">
+        <string>R</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QSpinBox" name="spinBoxA">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spinBoxR">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="spinBoxG">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Cores</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="Alfa">
+       <property name="text">
+        <string>A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="5">
+      <widget class="Color" name="widget_2" native="true"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="Azul">
+       <property name="text">
+        <string>B</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="spinBoxB">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="Verde">
+       <property name="text">
+        <string>G</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>150</y>
+      <width>79</width>
+      <height>180</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButtonPutVoxel">
+       <property name="text">
+        <string>PutVoxel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButtonPutEllipsoid">
+       <property name="text">
+        <string>PutEllipsoid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="radioButtonPutSphere">
+       <property name="text">
+        <string>PutSphere</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QRadioButton" name="radioButtonPutBox">
+       <property name="text">
+        <string>PutBox</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QRadioButton" name="radioButtonCutBox">
+       <property name="text">
+        <string>CutBox</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QRadioButton" name="radioButtonCutVoxel">
+       <property name="text">
+        <string>CutVoxel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QRadioButton" name="radioButtonCutEllipsoid">
+       <property name="text">
+        <string>CutEllipsoid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QRadioButton" name="radioButtonCutSphere">
+       <property name="text">
+        <string>CutSphere</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>240</y>
+      <width>64</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelBox">
+       <property name="text">
+        <string>Caixa</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSpinBox" name="spinBoxDimX"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="DimX">
+       <property name="text">
+        <string>DimX</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSpinBox" name="spinBoxDimY"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="DimY">
+       <property name="text">
+        <string>DimY</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QSpinBox" name="spinBoxDimZ"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="DimZ">
+       <property name="text">
+        <string>DimZ</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>130</y>
+      <width>62</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelEllipsoid">
+       <property name="text">
+        <string>Elipsoide</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSpinBox" name="spinBoxRx"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="Rx">
+       <property name="text">
+        <string>Rx</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSpinBox" name="spinBoxRy"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="Ry">
+       <property name="text">
+        <string>Ry</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QSpinBox" name="spinBoxRz"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="Rz">
+       <property name="text">
+        <string>Rz</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>70</y>
+      <width>62</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelSphere">
+       <property name="text">
+        <string>Esfera</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSpinBox" name="spinBoxRaio"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="Raio">
+       <property name="text">
+        <string>Raio</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>506</x>
+      <y>40</y>
+      <width>51</width>
+      <height>74</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QLabel" name="XGeral">
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="spinBoxXCanvas"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="YGeral">
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spinBoxYCanvas"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ZGeral">
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="spinBoxZCanvas"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>757</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Plotter</class>
+   <extends>QWidget</extends>
+   <header>plotter.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Color</class>
+   <extends>QWidget</extends>
+   <header>color.h</header>
+   <container>1</container>
+   <slots>
+    <slot>set_r(int)</slot>
+    <slot>set_g(int)</slot>
+    <slot>set_b(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sair()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxXCanvas</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxXCanvas</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>523</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxYCanvas</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxYCanvas</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>523</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxZCanvas</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxZCanvas</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>523</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxDimX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxDimX</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxDimY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxDimY</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxDimZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxDimZ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxRaio</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxRaio</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxRx</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxRx</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxRy</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxRy</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxRz</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxRz</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>531</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>462</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxA</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxA</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>531</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget_2</receiver>
+   <slot>set_r(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget_2</receiver>
+   <slot>set_g(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget_2</receiver>
+   <slot>set_b(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxProf</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxProf</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>457</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sair()</slot>
+ </slots>
+</ui>

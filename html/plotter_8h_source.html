@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>escultor_pa_u3: Código-Fonte de InterfaceEscultor/plotter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">escultor_pa_u3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cf6f1db832f6984d7c6817709eceb2b1.html">InterfaceEscultor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">plotter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PLOTTER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PLOTTER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;sculptor.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;vector&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_plotter.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_plotter.html">Plotter</a> : <span class="keyword">public</span> QWidget{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_plotter.html">Plotter</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> paintEvent(QPaintEvent *event);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *event);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent *event);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> shape(<span class="keywordtype">int</span> _shape);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_sculptor.html">Sculptor</a> *s;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> _shape = 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> dim, plane;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> sizeX, sizeY, sizeZ;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> r, g, b, a;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> radius, rx, ry,rz;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span> x,y,z;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> _height, _width;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        vector&lt;vector&lt;Voxel&gt;&gt; p;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        QColor lineColor;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">int</span> cor;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        QAction *actionChangeColor;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> cube;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> square;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> px, py, pz;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> press;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> mx, my;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    signals:</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_plotter.html#a7bf0de4df3c3347c23e03ac688b010a5">   65</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plotter.html#a7bf0de4df3c3347c23e03ac688b010a5">moveX</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_plotter.html#a218365f0082563074e746e8c3753a2c0">   69</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plotter.html#a218365f0082563074e746e8c3753a2c0">moveY</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_plotter.html#a5062f8c5dac9e7c77b9bfa2206382146">   73</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plotter.html#a5062f8c5dac9e7c77b9bfa2206382146">clickX</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_plotter.html#a840086ff1d98fa8b868b40e1e70d7118">   77</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plotter.html#a840086ff1d98fa8b868b40e1e70d7118">clickY</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_plotter.html#a89299c59f57bfa91900af28e7009efe8">   81</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plotter.html#a89299c59f57bfa91900af28e7009efe8">planeChosen</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">void</span> changeDimX(<span class="keywordtype">int</span> dimx);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> changeDimY(<span class="keywordtype">int</span> dimy);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> changeDimZ(<span class="keywordtype">int</span> dimz);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> changeRadius(<span class="keywordtype">int</span> _radius);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">void</span> changeRx(<span class="keywordtype">int</span> radx);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> changeRy(<span class="keywordtype">int</span> rady);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> changeRz(<span class="keywordtype">int</span> radz);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> changeRed(<span class="keywordtype">int</span> red);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> changeGreen(<span class="keywordtype">int</span> green);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> changeBlue(<span class="keywordtype">int</span> blue);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> changeAlfa(<span class="keywordtype">int</span> alpha);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> changePlane(<span class="keywordtype">int</span> _plane);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> createOff();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent *event);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;signals:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;};</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PLOTTER_H</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="ttc" id="aclass_plotter_html"><div class="ttname"><a href="class_plotter.html">Plotter</a></div><div class="ttdoc">A classe Plotter permite a criação de desenhos.</div><div class="ttdef"><b>Definition:</b> plotter.h:13</div></div>
+<div class="ttc" id="aclass_plotter_html_a218365f0082563074e746e8c3753a2c0"><div class="ttname"><a href="class_plotter.html#a218365f0082563074e746e8c3753a2c0">Plotter::moveY</a></div><div class="ttdeci">void moveY(int)</div><div class="ttdoc">moveY é a função resposável por guardar as posições Y do mouse.</div></div>
+<div class="ttc" id="aclass_plotter_html_a5062f8c5dac9e7c77b9bfa2206382146"><div class="ttname"><a href="class_plotter.html#a5062f8c5dac9e7c77b9bfa2206382146">Plotter::clickX</a></div><div class="ttdeci">void clickX(int)</div><div class="ttdoc">clickX é a função resposável por guardar as posições X do mouse quando clicado.</div></div>
+<div class="ttc" id="aclass_plotter_html_a7bf0de4df3c3347c23e03ac688b010a5"><div class="ttname"><a href="class_plotter.html#a7bf0de4df3c3347c23e03ac688b010a5">Plotter::moveX</a></div><div class="ttdeci">void moveX(int)</div><div class="ttdoc">moveX é a função resposável por guardar as posições X do mouse.</div></div>
+<div class="ttc" id="aclass_plotter_html_a840086ff1d98fa8b868b40e1e70d7118"><div class="ttname"><a href="class_plotter.html#a840086ff1d98fa8b868b40e1e70d7118">Plotter::clickY</a></div><div class="ttdeci">void clickY(int)</div><div class="ttdoc">clickY é a função resposável por guardar as posições Y do mouse quando clicado.</div></div>
+<div class="ttc" id="aclass_plotter_html_a89299c59f57bfa91900af28e7009efe8"><div class="ttname"><a href="class_plotter.html#a89299c59f57bfa91900af28e7009efe8">Plotter::planeChosen</a></div><div class="ttdeci">void planeChosen(int)</div><div class="ttdoc">planeChosen é a função resposável por guardar o plano que foi escolhido para o desenho.</div></div>
+<div class="ttc" id="aclass_sculptor_html"><div class="ttname"><a href="class_sculptor.html">Sculptor</a></div><div class="ttdoc">Classe Sculptor Monta uma estrutura e fornece os métodos para manipulação dos Voxels.</div><div class="ttdef"><b>Definition:</b> sculptor.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
